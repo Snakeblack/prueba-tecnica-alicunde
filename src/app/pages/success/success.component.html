@@ -1,0 +1,13 @@
+<section id="wrapper">
+  <header id="header">
+    <app-logo [style.view-transition-name]="'logo'"></app-logo>
+  </header>
+  <main id="main">
+    <article class="container-gif">
+      <img [srcset]="gifPath" alt="gif" class="img-gif" />
+    </article>
+  </main>
+  <footer id="footer">
+    <p class="firma">{{ firma }}</p>
+  </footer>
+</section>

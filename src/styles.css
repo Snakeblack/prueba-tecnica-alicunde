@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/** 
+ * Se establece los colores del esquema y utiles para el diseño como variables de CSS
+ */
+:root {
+  --primary: #1119ff;
+  --secondary: #71717a;
+  --tertiary: #e4e4e7;
+  --success: #00c851;
+  --danger: #ff4444;
+  --warning: #ffbb33;
+  --info: #33b5e5;
+  --light: #ffffff;
+  --dark: #05050a;
+  --dark-hover: #05050aec;
+  --dark-active: #18181b;
+}
+
+body {
+  font-family: "Montserrat Variable", sans-serif;
+  height: 100dvh;
+  width: 100dvw;
+}

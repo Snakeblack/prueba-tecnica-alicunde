@@ -1,0 +1,18 @@
+<div id="main-content">
+  <section id="info-panel">
+    <div id="logo">
+      <app-logo [style.view-transition-name]="'logo'" />
+    </div>
+    <div id="info">
+      <p>
+        {{ infoPanelText }}
+      </p>
+    </div>
+  </section>
+  <section id="form-login--container">
+    <app-form-login
+      [titleForm]="titleForm"
+      [descriptionForm]="descriptionForm"
+    />
+  </section>
+</div>

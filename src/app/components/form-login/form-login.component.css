@@ -1,0 +1,145 @@
+#form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: auto;
+  color: var(--dark);
+
+  & .header-login {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+    & h1 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+
+    & p {
+      color: var(--secondary);
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  & .body-login {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    & form {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    & .form-group {
+      display: grid;
+      gap: 0.25rem;
+
+      & label {
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1;
+        position: absolute;
+        width: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      & .form-control {
+        display: flex;
+        height: 2.25rem;
+        width: 100%;
+        border-radius: 6px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--tertiary);
+        background-color: transparent;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        box-shadow: 0 0 transparent, 0 0 transparent,
+          0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+      }
+
+      & .password-input[type="text"] {
+        color: transparent;
+        user-select: none;
+      }
+
+      & .form-control:focus-visible {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        box-shadow: 0 0 transparent, 0 0 transparent,
+          0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 transparent;
+      }
+    }
+
+    & .error-form {
+      padding-inline: 0.25rem;
+      & p {
+        color: var(--danger);
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        text-wrap: pretty;
+      }
+    }
+
+    & .btn-submit {
+      text-transform: none;
+      background-image: none;
+      cursor: pointer;
+      display: inline-flex;
+      height: 2.25rem;
+      justify-content: center;
+      white-space: nowrap;
+      border-radius: calc(0.5rem - 2px);
+      background-color: var(--dark);
+      padding-inline: 1rem;
+      padding-block: 0.5rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      color: var(--light);
+      box-shadow: 0 0 transparent, 0 0 transparent,
+        0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      width: 100%;
+
+      &:disabled {
+        background-color: var(--tertiary);
+        color: var(--secondary);
+      }
+
+      &:hover {
+        background-color: var(--dark-hover);
+      }
+
+      &:active {
+        background-color: var(--dark-active);
+      }
+    }
+  }
+}
+
+@media (width >= 640px) {
+  #form-login {
+    width: 350px;
+  }
+}
+
+@media (width < 640px) {
+  #form-login {
+    width: 70%;
+  }
+}

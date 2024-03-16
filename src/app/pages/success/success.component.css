@@ -1,0 +1,63 @@
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100dvh;
+  width: 100dvw;
+  background: #000428;
+  background: -webkit-linear-gradient(to top, #004e92, #000428);
+  background: linear-gradient(to top, #004e92, #000428);
+
+  & #header {
+    height: 15vh;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+  }
+
+  & #main {
+    display: grid;
+    width: 100%;
+    place-items: center;
+    padding-inline: 3rem;
+    flex-grow: 1;
+
+    & .container-gif {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      max-width: 100%;
+      border: 3px solid var(--primary);
+      border-radius: 1rem;
+      box-shadow: 0 0 2rem var(--primary), 0 0 1rem var(--primary) inset;
+      cursor: pointer;
+
+      & .img-gif {
+        border-radius: 1rem;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    & .container-gif:hover {
+      transform: scale(1.02);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 0 5rem var(--primary), 0 0 2rem var(--primary) inset;
+    }
+  }
+
+  & #footer {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: end;
+    & .firma {
+      font-size: 0.9rem;
+      color: #0e0e3861;
+      text-align: center;
+      padding-block: 2rem;
+    }
+  }
+}
